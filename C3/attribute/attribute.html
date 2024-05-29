@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute trong JQuery</title>
+    <script src="js/jQuery-3.7.1.js"></script>
+    <!-- 1. Tô màu đỏ cho trang chủ
+    2.Tô màu #333 cho tất cả các phần tử menu không phải là trang chủ
+    3.Lấy tất menu product
+    4. Lấy tất cả những product nó có chứa product , theo sao là dấu "-"
+    5. Tìm tất cả những menu bắt đầu bằng product, cho nó màu f5f5f5
+    6. Lấy tất cả menu có link kết thúc, bằng clothes.html
+    7.Lấy tất cả menu, có title 2 từ trở lên, cho nó màu green
+    8.Lấy tất cả menu có href là màu đỏ
+ -->
+    <script>
+      $(document).ready(function () {
+        $("ul>li").css("list-style-type", "none");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Menu-Website</h1>
+    <ul>
+      <li><a href="home.html" title="trang chủ">Trang Chủ</a></li>
+      <li><a href="intro.html" title="giới thiệu">Giới thiệu</a></li>
+      <li><a href="product-shoe.html" title="sản phẩm">Giày</a></li>
+      <li><a href="product-clothes.html" title="sản phẩm">Quần áo</a></li>
+      <li><a href="post.html" title="bài viết">Bài Viết</a></li>
+      <li><a href="signin.html" title="đăng nhập">Đăng nhập</a></li>
+    </ul>
+  </body>
+</html>
