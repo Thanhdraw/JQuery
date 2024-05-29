@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector theo dinh vi</title>
+    <script src="js/jQuery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 1.Chọn phần tử có chỉ số 1 =>
+        // $("p:eq(0)").css("color", "red");
+        // 2.Chọn phần p đầu tien => màu đỏ
+        // $("p:first").css("color", "red");
+        // 3.Chọn phần p cuối => màu đỏ
+        // $("p:last").css("color", "red");
+        // 4.Chọn phần tử có chỉ số lốn hơn 1
+        // $("p:gt(1)").css("color", "green");
+        // 5.chọn thằng thứ 2 trong thẻ div có class="box"
+        // $("div.box p:eq(1)").css("color", "yellow");
+        // 6.Chọn phần tử p có chỉ số bé hơn 3 => màu tím
+        // $("p:lt(3)").css("color", "purple");
+        // 7.Chọn phần tử chỉ số lẻ => background-color:#333
+        // $("p:odd").css("background-color", "#333");
+        // 8.Chọn phần tử chỉ số chẳn => background-color:#6868
+        // $("p:even").css("background-color", "#6868");
+        // 9.Chọn tất cả các phần tử ngoại trừ chỉ số: 2 =>màu đỏ
+        $("p:not(.p2)").css("color", "red");
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+      ratione aliquam nemo quia fugiat iure obcaecati eligendi molestiae
+      quisquam adipisci voluptates, atque quidem voluptate quis. Accusantium
+      odio tempore numquam mollitia.
+    </p>
+    <p>
+      Vitae, repellat sequi. Maiores ipsa voluptate omnis enim quisquam optio a
+      vel vero nesciunt. Ab, reprehenderit sed esse beatae, vero excepturi quo
+      laboriosam, commodi natus rem doloribus. Ad, sed aperiam?
+    </p>
+    <p class="p2">
+      Delectus ab odit cupiditate doloremque consequatur. A porro quae nulla
+      dolorum totam delectus adipisci explicabo sed? Libero dolor consectetur
+      delectus incidunt cum, non veniam excepturi atque expedita, est ea
+      explicabo.
+    </p>
+    <p>
+      Dolores, aspernatur dolore molestiae, veritatis eius optio culpa quod
+      voluptate unde provident in? Vero atque necessitatibus tenetur quae unde
+      rerum saepe, placeat iste voluptatum eveniet quasi minima nisi odio
+      assumenda!
+    </p>
+    <p>
+      Laudantium, nemo eaque! Est perspiciatis accusamus eveniet voluptas
+      quaerat obcaecati voluptatem rem provident. Consequuntur voluptatibus
+      assumenda vel culpa accusamus hic ea, repellendus necessitatibus quidem
+      reiciendis. Magni quidem voluptas soluta ad.
+    </p>
+    <div class="box">
+      <p>
+        Delectus ab odit cupiditate doloremque consequatur. A porro quae nulla
+        dolorum totam delectus adipisci explicabo sed? Libero dolor consectetur
+        delectus incidunt cum, non veniam excepturi atque expedita, est ea
+        explicabo.
+      </p>
+      <p>
+        Dolores, aspernatur dolore molestiae, veritatis eius optio culpa quod
+        voluptate unde provident in? Vero atque necessitatibus tenetur quae unde
+        rerum saepe, placeat iste voluptatum eveniet quasi minima nisi odio
+        assumenda!
+      </p>
+      <p>
+        Laudantium, nemo eaque! Est perspiciatis accusamus eveniet voluptas
+        quaerat obcaecati voluptatem rem provident. Consequuntur voluptatibus
+        assumenda vel culpa accusamus hic ea, repellendus necessitatibus quidem
+        reiciendis. Magni quidem voluptas soluta ad.
+      </p>
+    </div>
+    <a href="" class="link-1">Link 1</a>
+    <a href="" class="link-2">Link 2</a>
+  </body>
+</html>
