@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector lọc theo nội dung</title>
+    <script src="js/jQuery-3.7.1.js"></script>
+  </head>
+  <body>
+    <ul >
+      <li>Phần tử 1</li>
+      <li>
+        <ul class="sub">
+          <li class="color-red">Phần tử 2.1</li>
+          <li>Phần tử 2.2</li>
+        </ul>
+      </li>
+      <li>Phần tử 3</li>
+      <li>
+        <ul>
+          <li>Phần tử 4.1</li>
+          <li>Phần tử 4.2</li>
+        </ul>
+      </li>
+      <li>Phần tử 5</li>
+    </ul>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    // 1.Tìm phần tử không có nội dung , cho border: 1px solid #333
+    // 2.Tìm các phần tử có chứa nội dung "phần", cho màu đỏ
+    // 3.Tìm tất cả các phần tử có phần tử con, hoặc có nội dung
+    // 4. Tìm phần tử con , có selector cho trước
+  });
+</script>

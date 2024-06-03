@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jQuery-3.7.1.js"></script>
+    <title>Type of Jquery</title>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Tiêu đề 1</h2>
+
+      <a href="">link 1</a>
+      <p>Văn bản 1</p>
+      <a href="">link 2</a>
+      <p>Văn bản 2</p>
+      <h2>Tiêu đề 2</h2>
+      <a href="">link 3</a>
+      <p>Văn bản 3</p>
+      <a href="">link 4</a>
+      <a href="">link 5</a>
+      <a href="">link 6</a>
+      <h2>Tiêu đề 3</h2>
+    </div>
+    <div class="box">
+      <h2>Tiêu đề 5</h2>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    // 1.Tìm thẻ a đầu tiên => First-of-type
+    $(".box a:first-of-type").css("color", "red");
+    // 2.Last-of-type
+    $(".box h2:last-of-type").css("color", "red");
+    // 3.Only-of-type
+    $(".box h2:only-of-type").css("color", "red");
+  });
+</script>
