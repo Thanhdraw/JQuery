@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chương 4: thuộc tính trong JQuery</title>
+    <script src="../js/jQuery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div class="img">
+      <img
+        style="width: 100%"
+        src="attr/image/photo-1688649593308-40dfbb552d00.avif"
+        title=""
+      />
+      <a href="">lấy link ảnh</a>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $(".img").css({
+      display: "block",
+      width: "500px",
+      height: "100px",
+      margin: "auto",
+    });
+    // 1. click vào thẻ a để hiển thị link của hình ảnh, thông qua alert
+    $("a").click(function () {
+        event.preventDefault();
+      var a = $("img").attr("title", "iPhone");
+      alert(a);
+    });
+  });
+</script>
