@@ -16,21 +16,6 @@
     8.Lấy tất cả menu có href là màu đỏ $("a[href]")
     9. Lấy menu product có 2 từ trở lên và cho nó màu grey ("a[href*='product'][title*=' ']")
  -->
-    <script>
-      $(document).ready(function () {
-        $("ul>li").css("list-style-type", "none");
-        // 1. Tô màu đỏ cho trang chủ => ("a[href='home.html']")
-        //2.Tô màu #333 cho tất cả các phần tử menu không phải là trang chủ (!=), $("a[href!='home.html']")
-        // 3.Lấy tất ca menu product (*=)
-        // 4.Lấy tất cả những product nó có chứa product , theo sao là dấu "-"
-        // 5. Tìm tất cả những menu bắt đầu bằng product, cho nó màu f5f5f5 (^=)
-        // 6. Lấy tất cả menu có link kết thúc, bằng clothes.html ($=)
-        // 7.Lấy tất cả menu, có title 2 từ
-        // Trang va2 xung quanh co dau cach va cho nó màu green (~'words')
-        // 8.Lấy tất cả menu có href là màu đỏ
-        // 9. Lấy menu product có 2 từ trở lên và cho nó màu grey
-      });
-    </script>
   </head>
   <body>
     <h1>Menu-Website</h1>
@@ -44,3 +29,18 @@
     </ul>
   </body>
 </html>
+<script>
+  $(document).ready(function () {
+    $("ul>li").css("list-style-type", "none");
+    // 1. Tô màu đỏ cho trang chủ => ("a[href='home.html']")
+    //2.Tô màu #333 cho tất cả các phần tử menu không phải là trang chủ (!=), $("a[href!='home.html']")
+    // 3.Lấy tất ca menu product
+    // 4.Lấy tất cả những product nó có chứa product , theo sao là dấu
+    // 5. Tìm tất cả những menu bắt đầu bằng product, cho nó màu f5f5f5
+    // 6. Lấy tất cả menu có link kết thúc, bằng clothes.html
+    // 7.Lấy tất cả menu, có title 2 từ
+    // Trang va2 xung quanh co dau cach va cho nó màu green
+    // 8.Lấy tất cả menu có href là màu đỏ
+    // 9. Lấy menu product có 2 từ trở lên và cho nó màu grey
+  });
+</script>
