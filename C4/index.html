@@ -15,6 +15,7 @@
         title=""
       />
       <a href="">lấy link ảnh</a>
+      <a class="remove" href="">removeLink</a>
     </div>
   </body>
 </html>
@@ -28,9 +29,13 @@
     });
     // 1. click vào thẻ a để hiển thị link của hình ảnh, thông qua alert
     $("a").click(function () {
-        event.preventDefault();
+      event.preventDefault();
       var a = $("img").attr("title", "iPhone");
       alert(a);
+    });
+    $(".remove").click(function () {
+      event.preventDefault();
+      let remove = $("img").removeAttr("src");
     });
   });
 </script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/jQuery-3.7.1.js"></script>
+    <title>Tim kiem va loc trong JQuery</title>
+  </head>
+  <body>
+    <p>Doan van thu 1</p>
+    <p class="highlight">Doan van thu 2</p>
+    <p>Doan van thu 3</p>
+    <p>Doan van thu 4</p>
+    <p class="highlight">Doan van thu 5</p>
+    <p>Doan van thu 6</p>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    //1.cho p dau tien la mau do
+    // $("p:eq(1)").css("color", "red");
+    // 2.co class= 'hightlight' la red
+    // $("p").not(".highlight").css("color", "red");
+    // 3.loc class 'hightlight' co mau yellow
+    // $("p").filter(".highlight").css("color", "gold");
+    // 4.Cho 1 doan van phia sau cái highlight mau pink
+    // $("p").filter(".highlight").next().css("color", "pink");
+    // 5.nextAll
+    // $("p").filter(".highlight").nextAll().css("color", "#8787");
+    // 6.eq
+    // $("p").eq(3).nextAll(".highlight").css("color", "red");
+    // 7.click và class='highlight'
+    $("p").click(function () {
+      if ($(this).is(".highlight")) {
+        alert("highlight");
+      }
+    });
+  });
+</script>

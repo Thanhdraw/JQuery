@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/jQuery-3.7.1.js"></script>
     <title>Document</title>
+    <style>
+      .hight-light {
+        background-color: yellow;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <p>doan van so 1</p>
@@ -15,3 +21,19 @@
     <p>doan van so 5</p>
   </body>
 </html>
+
+<script>
+  $(document).ready(function () {
+    $("p").click(function () {
+      event.preventDefault();
+      // cach 1
+      // if (!$("p").hasClass("css_p")) {
+      //   $("p").removeClass("hight-light");
+      //   $(this).addClass("hight-light");
+      // }
+      // cach 2
+      $("p").removeClass("hight-light");
+      $(this).toggleClass("hight-light");
+    });
+  });
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>jQuery Dropdown</title>
+    <style>
+      .dropdown-menu {
+        display: none; /* Ẩn menu dropdown theo mặc định */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>jQuery Dropdown</h2>
+      <button id="dropdownButton" class="btn btn-primary">Dropdown</button>
+      <ul id="dropdownMenu" class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+      <h2>JQuery Dropdown 2</h2>
+      <li>
+        <a href="">Dropdown 2</a>
+        <ul id="dropdownMenu" class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#dropdownButton").click(function () {
+          $("#dropdownMenu").toggle();
+        });
+
+        $(document).click(function (event) {
+          var $target = $(event.target);
+          if (
+            !$target.closest("#dropdownButton").length &&
+            $("#dropdownMenu").is(":visible")
+          ) {
+            $("#dropdownMenu").hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
