@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="/week1/import/js/jquery.js"></script>
+
+    </head>
+    <body>
+        <p>Đoạn văn 1</p>
+        <p>Đoạn văn 2</p>
+        <p>Đoạn văn 3</p>
+        <p>Đoạn văn 4</p>
+        <p>Đoạn văn 5</p>
+        <a href>Link 1</a><a href>Link 2</a>
+        <div class="box">
+            <p>Đoạn văn 7</p>
+            <p>Đoạn văn 8</p>
+            <p>Đoạn văn 9</p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+        //    1. Chọn phần tử p  có màu đỏ
+        // $(".box p:eq(2)").css('color','red');
+        // 2.Chon phần tử đầu tiên 
+        //  $("p:first").css('color','red');
+        // 3. Chọn phần tử cuối cùng
+        // $("p:last").css('color','red');
+        // 4.Chọn phần tử p có chỉ số lơn 1
+        // $("p:gt(1)").css('color','red');
+        // 5.Chọn phần tử p có chỉ số bé hơn 3
+        //   $("p:lt(2)").css('color','red');
+        // 6.Chon phần tử có chỉ số lẻ
+        // $("p:odd").css('color','red');
+          // 7.Chon phần tử có chỉ số lẻ
+        // $("p:even").css('color','red');
+        // 8.Chọn tất cả các phần tử p ngoại trừ chỉ số 2 => màu đỏ
+        $("p:not('p:eq(2)')").css('color','red');
+        });
+    </script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Shop</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #333; color: white; padding: 10px; }
+    #menu ul { list-style: none; padding: 0; display: flex; }
+    #menu li { padding: 10px; margin-right: 10px; background: #555; color: white; cursor: pointer; }
+    #banner { background: orange; padding: 20px; text-align: center; }
+    .products { display: flex; gap: 10px; padding: 10px; flex-wrap: wrap; }
+    .product { border: 1px solid #ccc; padding: 10px; width: 120px; text-align: center; }
+    footer { background: #f1f1f1; padding: 10px; text-align: center; margin-top: 20px; }
+    #cart { background: #eee; padding: 10px; margin: 10px; }
+    .item { border-bottom: 1px solid #ccc; padding: 5px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Mini Shop</h1>
+    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+  </header>
+
+  <!-- Menu -->
+  <nav id="menu">
+    <ul>
+      <li>Trang chủ</li>
+      <li>Áo</li>
+      <li>Quần</li>
+      <li>Giày</li>
+      <li>Sale</li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <div id="banner">🔥 Khuyến mãi 50% tất cả sản phẩm giày hôm nay!</div>
+
+  <!-- Danh sách sản phẩm -->
+  <div class="products">
+    <div class="product" data-category="shirt">Áo thun</div>
+    <div class="product" data-category="pants">Quần jeans</div>
+    <div class="product" data-category="shoes sale">Giày Nike</div>
+    <div class="product" data-category="shirt">Áo sơ mi</div>
+    <div class="product" data-category="pants">Quần short</div>
+  </div>
+
+  <!-- Giỏ hàng -->
+  <div id="cart">
+    <h3>Giỏ hàng</h3>
+    <div class="item">Áo thun</div>
+    <div class="item">Quần jeans</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mini Shop</p>
+    <a href="#">Chính sách bảo mật</a> | 
+    <a href="#">Điều khoản dịch vụ</a>
+  </footer>
+
+</body>
+</html>

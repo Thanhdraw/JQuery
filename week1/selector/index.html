@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="/week1/import/js/jquery.js"></script>
+    </head>
+    <body>
+        <h1>Menu Website</h1>
+        <a href="home.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="'clothes.html">Quần áo</a>
+        <a href="shoes.html">Giày</a>
+        <a href="contact.html">Liên hệ</a>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("a[href='home.html']").css('color','red');
+        }); 
+    </script>
+</html>

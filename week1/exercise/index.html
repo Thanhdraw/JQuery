@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Menu Header - Bài tập selector</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Styles tối giản để bạn dễ thử selector */
+      body {
+        font-family: system-ui, Arial;
+        padding: 20px;
+      }
+      #menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 12px;
+      }
+      #menu > li {
+        position: relative;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      #menu a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        list-style: none;
+        padding: 8px;
+        margin: 6px 0 0 0;
+        display: block;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      }
+      .submenu li {
+        padding: 6px 10px;
+        white-space: nowrap;
+      }
+      .login {
+        margin-left: auto;
+      }
+      .active {
+        background: #007bff;
+        color: #fff;
+        border-radius: 4px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Menu Header - Bài tập selector</h2>
+    <!-- Gán id="menu" cho ul chính -->
+    <ul id="menu">
+      <li><a href="/">Trang chủ</a></li>
+      <li><a href="/gioi-thieu">Giới thiệu</a></li>
+      <li class="has-sub">
+        <a href="/san-pham" aria-haspopup="true">Sản phẩm</a>
+        <!-- Submenu (ẩn ban đầu) -->
+        <ul class="submenu hidden">
+          <li><a href="/san-pham/dien-thoai">Điện thoại</a></li>
+          <li>
+            <a href="/san-pham/laptop" target="_blank">Laptop (mở tab mới)</a>
+          </li>
+          <li><a href="/san-pham/phu-kien">Phụ kiện</a></li>
+        </ul>
+      </li>
+      <li><a href="/tin-tuc">Tin tức</a></li>
+      <li><a href="/lien-he">Liên hệ</a></li>
+      <!-- item CTA: có class login và là item cuối -->
+      <li class="login"><a href="/dang-nhap">Đăng nhập</a></li>
+    </ul>
+    <script>
+      $(document).ready(function () {
+        // 1.Đổi màu chữ item có class "login".
+        $('.login').css('color', 'red');
+        // 2. Chọn tất cả <li> trong menu để thêm border dưới.
+        $('#menu li').css('border', '1px solid blue');
+        //3. Item đầu tiên (Trang chủ) đổi màu xanh.
+        $('#menu li:first').css('color', 'green');
+        //   Item cuối cùng (Đăng nhập) nổi bật (background khác).
+        $('#menu li:last').css('background', '#666');
+        //   Item số 2 (Giới thiệu) in đậm.
+        $('#menu li:eq(1)').css('font-weight', 'bold');
+        //   Tất cả item từ số 3 trở đi (Sản phẩm, Tin tức, Liên hệ, Đăng nhập) đổi màu chữ khác.
+        $('#menu li:gt(3)').css('color', 'pink');
+
+        // 4.Attribute selector
+        // Tô màu riêng cho <a> có target="_blank"
+        $('#menu a[target="_blank"]').css('color', 'orange');
+
+        // Các link có href chứa "san-pham" thì gạch chân
+        $('#menu a[href*="san-pham"]').css('text-decoration', 'underline');
+
+        // 5.:has, find, children, parent
+        // Chọn li nào có submenu (Sản phẩm) để đổi màu chữ.
+        $('#menu li:has(.submenu)').css('color', 'purple');
+        // Khi hover vào Sản phẩm, submenu hiện ra.
+        $('#menu .has-sub').hover(
+          function () {
+            $(this).find('.submenu').stop(true, true).fadeIn(200);
+          },
+          function () {
+            $(this).find('.submenu').stop(true, true).fadeOut(200);
+          }
+        );
+
+        // 6.:not selector
+        // Tất cả item menu trừ Đăng nhập thì background xám khi hover.
+        $('#menu li:not(.login)').hover(
+          function () {
+            $(this).css('background', '#333');
+          },
+          function () {
+            $(this).css('background', '');
+          }
+        );
+        // 7..Khi click vào 1 item menu → bỏ active ở item cũ, thêm active vào item đang click.
+        $('#menu li').on('click', function (e) {
+          e.preventDefault(); // ngăn link nhảy trang (nếu muốn)
+
+          // Bỏ active ở item cũ
+          $('#menu li').removeClass('active');
+
+          // Thêm active vào item đang click
+          $(this).addClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>
